@@ -6,9 +6,9 @@
 
 CC=gcc
 #FLAGS=-ggdb -lpthread -lm -lunicorn
-FLAGS=-lpthread -lm -lunicorn 
+FLAGS=-lm -lunicorn 
 
-all: build srip
+all: build strip
 
 build: createBin createShellcode
 	$(CC) -I ./inc/ ./src/*.c $(FLAGS) -o ./bin/asmulator
