@@ -72,7 +72,7 @@ void emulate(int connfd, char *buff) {
             // dump bytes to disk and execute
             FILE *fd = fopen("/tmp/debug.elf", "wb");
             chmod("/tmp/debug.elf",  S_IWUSR|S_IXUSR|S_IRUSR);
-            char *elfBuffer = (char *)malloc(shellcode_size);
+            char *elfBuffer = (char *)malloc(shellcode_size); // 100MB
             bzero(elfBuffer, shellcode_size);
 
             // copying from byte 20 onward to elfBuffer to write to disk.
