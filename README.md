@@ -28,3 +28,6 @@ Preamble                           ARM Shellcode                             Com
 The Makefile generates a payload and writes the data to ```/tmp/shellcode.raw```.
 This can then me thrown at the challenge via the following command:
 * ```nc localhost 8080 < /tmp/shellcode.raw```
+
+
+*Note, the example only dumps 5 bytes to a file to demonstrate how to "pwn" the challenge. The competitor will have to write their payload (up to 100MB) which will then be exec'd.*
