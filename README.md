@@ -24,7 +24,7 @@ Preamble                           ARM Shellcode                             Com
 [shel] [\xde\x00\xa0\xe3\xad\x10\xa0\xe3\xbe\x20\xa0\xe3\xef\x30\xa0\xe3\] [x7f\x45\x4c\x46\x90\x90\x90\xa0]
 ```
 
-### Testing
+### Solve Script
 The Makefile generates a payload and writes the data to ```/tmp/shellcode.raw```.
 This can then me thrown at the challenge via the following command:
 * ```nc localhost 8080 < /tmp/shellcode.raw```
